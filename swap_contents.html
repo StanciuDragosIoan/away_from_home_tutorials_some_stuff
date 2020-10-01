@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="div1">
+      DIV ONE HERE
+      <div>NESTED1</div>
+    </div>
+
+    <div class="div2">
+      DIV TWO HERE
+      <div>NESTED2</div>
+    </div>
+    <button onclick="test()">test</button>
+    <script>
+      const test = () => {
+        const div1 = document.querySelector('.div1');
+        const div2 = document.querySelector('.div2');
+        const content1 = div1.innerHTML;
+        const content2 = div2.innerHTML;
+        div1.innerHTML = content2;
+        div2.innerHTML = content1;
+        // console.log()
+      };
+    </script>
+  </body>
+</html>
